@@ -1,0 +1,10 @@
+.zoom-container {
+  transform: scale(1000); /* Adjust this value */
+  transform-origin: 51.15% 70%;
+  transition: transform 1s ease;
+}
+
+.content {
+  transform: scale(1); /* Adjust this value */
+  transform-origin: top left;
+}

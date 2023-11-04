@@ -1,1 +1,13 @@
-<p>project-gallery works!</p>
+<div class="p-48 grid grid-cols-2 md:grid-cols-3 gap-4" id="projects">
+  <div *ngFor="let imageSrc of images">
+    <figure
+      class="shadow-2xl shadow-blue-700 relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+      <div>
+        <img [src]="imageSrc" alt="" class="h-auto max-w-full rounded-lg" />
+      </div>
+      <figcaption class="absolute px-4 text-lg text-white bottom-6">
+        <p>Project name</p>
+      </figcaption>
+    </figure>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 <div [ngClass]="{ 'footer-visible': footerVisible }" class="footer-transition">
   <div
-    class="fixed bottom-0 left-0 z-50 grid w-full h-16 grid-cols-1 px-8 border-t md:grid-cols-3 bg-gray-700/40 backdrop-blur border-gray-600">
+    class="fixed bottom-0 left-0 z-50 grid w-full h-16 grid-cols-1 px-8 border-t md:grid-cols-3 bg-blue-600/30 backdrop-blur border-gray-600">
     <div
       class="items-center justify-center hidden mr-auto text-gray-400 md:flex">
       <svg
@@ -12,152 +12,127 @@
         <path
           d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z" />
       </svg>
-      <span class="text-sm">12:43 PM</span>
+      <span class="text-sm">my local time > {{ currentTime }}</span>
     </div>
     <div class="flex items-center justify-center mx-auto">
-      <button
-        class="p-2.5 group rounded-full mr-4 focus:outline-none focus:ring-4 focus:ring-gray-800 bg-gray-600 hover:bg-gray-800"
-        data-tooltip-target="tooltip-microphone"
-        type="button">
-        <svg
-          aria-hidden="true"
-          class="w-4 h-4 text-gray-300 group-hover:text-white"
-          fill="currentColor"
-          viewBox="0 0 16 19"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M15 5a1 1 0 0 0-1 1v3a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a1 1 0 0 0-2 0v3a6.006 6.006 0 0 0 6 6h1v2H5a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2H9v-2h1a6.006 6.006 0 0 0 6-6V6a1 1 0 0 0-1-1Z" />
-          <path
-            d="M9 0H7a3 3 0 0 0-3 3v5a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3Z" />
-        </svg>
-        <span class="sr-only">Mute microphone</span>
-      </button>
-      <div
-        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700"
-        id="tooltip-microphone"
-        role="tooltip">
-        Mute microphone
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
-      <button
-        class="p-2.5 group rounded-full mr-4 focus:outline-none focus:ring-4 focus:ring-gray-800 bg-gray-600 hover:bg-gray-800"
-        data-tooltip-target="tooltip-camera"
-        type="button">
-        <svg
-          aria-hidden="true"
-          class="w-4 h-4 text-gray-300 group-hover:text-white"
-          fill="currentColor"
-          viewBox="0 0 20 14"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M11 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm8.585 1.189a.994.994 0 0 0-.9-.138l-2.965.983a1 1 0 0 0-.685.949v8a1 1 0 0 0 .675.946l2.965 1.02a1.013 1.013 0 0 0 1.032-.242A1 1 0 0 0 20 12V2a1 1 0 0 0-.415-.811Z" />
-        </svg>
-        <span class="sr-only">Hide camera</span>
-      </button>
-      <div
-        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700"
-        id="tooltip-camera"
-        role="tooltip">
-        Hide camera
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
-      <div
-        class="z-10 hidden divide-y rounded-lg shadow w-44 bg-gray-700 divide-gray-600"
-        id="moreOptionsDropdown">
-        <ul
-          aria-labelledby="moreOptionsDropdownButton"
-          class="py-2 text-sm text-gray-700 dark:text-gray-200">
-          <li>
-            <a
-              class="block px-4 py- hover:bg-gray-600 hover:text-white"
-              href="#"
-              >Show participants</a
-            >
-          </li>
-          <li>
-            <a
-              class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
-              href="#"
-              >Adjust volume</a
-            >
-          </li>
-          <li>
-            <a
-              class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
-              href="#"
-              >Show information</a
-            >
-          </li>
-        </ul>
-      </div>
+      <a href="#home">
+        <button class="p-2.5 mr-4" type="button">
+          <svg
+            aria-hidden="true"
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            fill="none"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2" />
+          </svg>
+        </button>
+      </a>
+      <a href="#timeline">
+        <button class="p-2.5 mr-4" type="button">
+          <svg
+            aria-hidden="true"
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            fill="none"
+            viewBox="0 0 17 10"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6 1h10M6 5h10M6 9h10M1.49 1h.01m-.01 4h.01m-.01 4h.01"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2" />
+          </svg>
+        </button>
+      </a>
+      <a href="#projects">
+        <button class="p-2.5 mr-4" type="button">
+          <svg
+            aria-hidden="true"
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            fill="none"
+            viewBox="0 0 20 16"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8 8v1h4V8m4 7H4a1 1 0 0 1-1-1V5h14v9a1 1 0 0 1-1 1ZM2 1h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"
+              stroke="currentColor"
+              stroke-linejoin="round"
+              stroke-width="2" />
+          </svg>
+        </button>
+      </a>
+      <a href="#contact">
+        <button class="p-2.5 mr-4" type="button">
+          <svg
+            aria-hidden="true"
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            fill="none"
+            viewBox="0 0 20 18"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5 5h9M5 9h5m8-8H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4l3.5 4 3.5-4h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2" />
+          </svg>
+        </button>
+      </a>
     </div>
     <div class="items-center justify-center hidden ml-auto md:flex">
-      <button
-        class="p-2.5 group rounded-full mr-1 focus:outline-none focus:ring-4 focus:ring-gray-600 hover:bg-gray-600"
-        data-tooltip-target="tooltip-participants"
-        type="button">
-        <svg
-          aria-hidden="true"
-          class="w-4 h-4 text-gray-500 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white"
-          fill="currentColor"
-          viewBox="0 0 20 18"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
-        </svg>
-        <span class="sr-only">Show participants</span>
-      </button>
-      <div
-        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700"
-        id="tooltip-participants"
-        role="tooltip">
-        Show participants
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
-      <button
-        class="p-2.5 group rounded-full mr-1 focus:outline-none focus:ring-4 focus:ring-gray-600 hover:bg-gray-600"
-        data-tooltip-target="tooltip-volume"
-        type="button">
-        <svg
-          aria-hidden="true"
-          class="w-4 h-4 text-gray-500 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white"
-          fill="currentColor"
-          viewBox="0 0 20 18"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M10.836.357a1.978 1.978 0 0 0-2.138.3L3.63 5H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1.63l5.07 4.344a1.985 1.985 0 0 0 2.142.299A1.98 1.98 0 0 0 12 15.826V2.174A1.98 1.98 0 0 0 10.836.357Zm2.728 4.695a1.001 1.001 0 0 0-.29 1.385 4.887 4.887 0 0 1 0 5.126 1 1 0 0 0 1.674 1.095A6.645 6.645 0 0 0 16 9a6.65 6.65 0 0 0-1.052-3.658 1 1 0 0 0-1.384-.29Zm4.441-2.904a1 1 0 0 0-1.664 1.11A10.429 10.429 0 0 1 18 9a10.465 10.465 0 0 1-1.614 5.675 1 1 0 1 0 1.674 1.095A12.325 12.325 0 0 0 20 9a12.457 12.457 0 0 0-1.995-6.852Z" />
-        </svg>
-        <span class="sr-only">Adjust volume</span>
-      </button>
-      <div
-        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700"
-        id="tooltip-volume"
-        role="tooltip">
-        Adjust volume
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
-      <button
-        class="p-2.5 group rounded-full focus:outline-none focus:ring-4 focus:ring-gray-600 hover:bg-gray-600"
-        data-tooltip-target="tooltip-information"
-        type="button">
-        <svg
-          aria-hidden="true"
-          class="w-4 h-4 text-gray-300 group-hover:text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-        </svg>
-        <span class="sr-only">Show information</span>
-      </button>
-      <div
-        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700"
-        id="tooltip-information"
-        role="tooltip">
-        Show information
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <a
+        href="https://www.linkedin.com/in/viorel-%C8%99oitu-8a6172274/"
+        target="_blank">
+        <button class="p-2.5" type="button">
+          <svg
+            aria-hidden="true"
+            class="w-4 h-4 text-gray-800 dark:text-white"
+            fill="currentColor"
+            viewBox="0 0 15 15"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              clip-rule="evenodd"
+              d="M7.979 5v1.586a3.5 3.5 0 0 1 3.082-1.574C14.3 5.012 15 7.03 15 9.655V15h-3v-4.738c0-1.13-.229-2.584-1.995-2.584-1.713 0-2.005 1.23-2.005 2.5V15H5.009V5h2.97ZM3 2.487a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
+              fill-rule="evenodd" />
+            <path d="M3 5.012H0V15h3V5.012Z" />
+          </svg>
+        </button>
+      </a>
+      <a
+        href="https://www.facebook.com/profile.php?id=100006709878739"
+        target="_blank">
+        <button class="p-2.5" type="button">
+          <svg
+            aria-hidden="true"
+            class="w-4 h-4 text-gray-800 dark:text-white"
+            fill="currentColor"
+            viewBox="0 0 8 19"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              clip-rule="evenodd"
+              d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+              fill-rule="evenodd" />
+          </svg>
+        </button>
+      </a>
+      <a href="https://github.com/1viorel" target="_blank">
+        <button class="p-2.5" type="button">
+          <svg
+            aria-hidden="true"
+            class="w-4 h-4 text-gray-800 dark:text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              clip-rule="evenodd"
+              d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+              fill-rule="evenodd" />
+          </svg>
+        </button>
+      </a>
     </div>
   </div>
 </div>
