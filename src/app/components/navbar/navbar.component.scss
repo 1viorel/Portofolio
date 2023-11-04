@@ -1,0 +1,9 @@
+/* navbar.component.scss */
+.footer-transition {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.footer-visible {
+  opacity: 1;
+}
