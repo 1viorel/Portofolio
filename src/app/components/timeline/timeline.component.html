@@ -1,29 +1,31 @@
 <div class="delay" id="timeline">
-  <div class="bg-gray-900 mx-12 rounded-2xl shadow-2xl shadow-blue-700">
-    <ol class="relative border-l m-48 flex flex-col">
-      <li *ngFor="let item of items" class="mb-10 ml-4">
-        <div class="flex justify-center flex-col p-12">
-          <div
-            class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5"></div>
-          <time class="mb-1 text-sm font-normal leading-none">{{
-            item.date
-          }}</time>
-          <div class="flex flex-row">
-            <div>
-              <h3 class="text-lg font-semibold">
-                {{ item.title }}
-              </h3>
-              <p class="mb-4 text-base font-normal">
-                {{ item.description }}
-              </p>
-            </div>
-            <img
-              alt="image description"
-              class="shadow-2xl shadow-blue-700 h-auto max-w-xs transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" />
+  <div
+    class="mt-32 mx-12 bg-gray-900 rounded-lg shadow-2xl shadow-blue-700 border-2 border-gray-800 relative flex flex-col">
+    <div class="-my-6 p-12">
+      <div class="text-4xl">activity:</div>
+      <div
+        *ngFor="let item of items; let last = last"
+        class="relative pl-8 sm:pl-32 py-6 group">
+        <div
+          [class]="
+            last
+              ? 'group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3'
+              : ''
+          "
+          class="flex flex-col sm:flex-row items-start mb-1">
+          <time
+            class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-24 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
+            {{ item.date }}
+          </time>
+          <div class="text-xl font-bold text-white">
+            {{ item.title }}
           </div>
         </div>
-      </li>
-    </ol>
+        <!-- Content -->
+        <div class="text-slate-500">
+          {{ item.description }}
+        </div>
+      </div>
+    </div>
   </div>
 </div>

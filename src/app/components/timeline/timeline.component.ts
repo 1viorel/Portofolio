@@ -26,6 +26,54 @@ export class TimelineComponent {
       description:
         'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
     },
+    {
+      date: 'April 2022',
+      title: 'E-Commerce UI code in Tailwind CSS',
+      description:
+        'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
+    },
+    {
+      date: 'April 2022',
+      title: 'E-Commerce UI code in Tailwind CSS',
+      description:
+        'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
+    },
+    {
+      date: 'April 2022',
+      title: 'E-Commerce UI code in Tailwind CSS',
+      description:
+        'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
+    },
+    {
+      date: 'April 2022',
+      title: 'E-Commerce UI code in Tailwind CSS',
+      description:
+        'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
+    },
+    {
+      date: 'April 2022',
+      title: 'E-Commerce UI code in Tailwind CSS',
+      description:
+        'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
+    },
+    {
+      date: 'April 2022',
+      title: 'E-Commerce UI code in Tailwind CSS',
+      description:
+        'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
+    },
+    {
+      date: 'April 2022',
+      title: 'E-Commerce UI code in Tailwind CSS',
+      description:
+        'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
+    },
+    {
+      date: 'April 2022',
+      title: 'E-Commerce UI code in Tailwind CSS',
+      description:
+        'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
+    },
   ];
   protected readonly window = window;
 }
