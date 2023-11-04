@@ -32,6 +32,6 @@ export class NavbarComponent implements AfterViewInit {
     this.currentTime = bucharestTime;
 
     // Update the current time every minute
-    setTimeout(() => this.updateCurrentTime(), 60000);
+    setTimeout(() => this.updateCurrentTime(), 30000);
   }
 }

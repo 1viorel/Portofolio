@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { window } from 'rxjs';
 
 @Component({
   selector: 'app-timeline',
@@ -26,4 +27,5 @@ export class TimelineComponent {
         'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
     },
   ];
+  protected readonly window = window;
 }

@@ -1,0 +1,10 @@
+.delay {
+  animation: fadeIn 2s ease-in-out 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
