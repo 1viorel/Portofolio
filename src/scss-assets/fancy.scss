@@ -56,3 +56,15 @@
     transform: translate(-22px, 5px) skew(21deg);
   }
 }
+
+
+.delay {
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
