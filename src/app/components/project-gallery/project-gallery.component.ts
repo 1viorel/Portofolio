@@ -6,6 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-gallery.component.scss'],
 })
 export class ProjectGalleryComponent {
+  projects = [
+    'Project 1',
+    'Project 2',
+    'Project 3',
+    'Project 4',
+    'Project 5',
+    'Project 6',
+    'Project 7',
+    'Project 8',
+    'Project 9',
+    'Project 10',
+    'Project 11',
+  ];
+
   images = [
     'https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg',
     'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg',

@@ -1,13 +1,13 @@
 <div class="text-9xl fancy font-extrabold pt-36 pb-12 pl-12">Projects:</div>
 <div class="px-48 grid grid-cols-2 md:grid-cols-3 gap-4" id="projects">
-  <div *ngFor="let imageSrc of images">
+  <div *ngFor="let project of projects; let i = index">
     <figure
-      class="shadow-2xl shadow-blue-700 relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+      class="shadow-2xl shadow-coolblue relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
       <div>
-        <img [src]="imageSrc" alt="" class="h-auto max-w-full rounded-lg" />
+        <img [src]="images[i]" alt="" class="h-auto max-w-full rounded-lg" />
       </div>
       <figcaption class="absolute px-4 text-lg text-white bottom-6">
-        <p>Project name</p>
+        <p>{{ project }}</p>
       </figcaption>
     </figure>
   </div>
