@@ -18,6 +18,7 @@ export class ProjectGalleryComponent {
     'Project 9',
     'Project 10',
     'Project 11',
+    'Project 12',
   ];
 
   images = [
@@ -33,5 +34,6 @@ export class ProjectGalleryComponent {
     'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg',
     'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg',
     'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg',
+    'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-12.jpg',
   ];
 }

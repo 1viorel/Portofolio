@@ -9,6 +9,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectGalleryComponent } from './components/project-gallery/project-gallery.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProjectGalleryComponent } from './components/project-gallery/project-ga
     ContactComponent,
     NavbarComponent,
     ProjectGalleryComponent,
+    TestimonialsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

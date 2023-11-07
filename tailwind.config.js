@@ -22,6 +22,9 @@ module.exports = {
 
       'desktop': '1280px',
       // => @media (min-width: 1280px) { ... }
+      'md': '1024px',
+      'sm': '640px',
+
     },
     extend: {}
   },
