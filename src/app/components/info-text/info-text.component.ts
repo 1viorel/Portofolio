@@ -12,7 +12,7 @@ export class InfoTextComponent {
 
     if (element) {
       const scrollY = window.scrollY;
-      const maxScroll = 300; // Adjust this value to control the scroll distance at which the element becomes fully transparent
+      const maxScroll = 600; // Adjust this value to control the scroll distance at which the element becomes fully transparent
       const opacity = Math.max(1 - scrollY / maxScroll, 0); // Calculate the new opacity
 
       element.style.opacity = opacity.toString();

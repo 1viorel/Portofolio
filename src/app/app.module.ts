@@ -10,6 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectGalleryComponent } from './components/project-gallery/project-gallery.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { ResumeComponent } from './components/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
     NavbarComponent,
     ProjectGalleryComponent,
     TestimonialsComponent,
+    ResumeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
