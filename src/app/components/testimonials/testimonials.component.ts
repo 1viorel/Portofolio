@@ -8,11 +8,6 @@ import { Component } from '@angular/core';
 export class TestimonialsComponent {
   quotes = [
     {
-      author: 'Adolf Hitler',
-      position: 'CEO of epicness',
-      text: 'Viorel ist sehr gut!',
-    },
-    {
       author: 'Albert Einstein',
       position: 'Physicist',
       text: 'Imagination is more important than knowledge.',

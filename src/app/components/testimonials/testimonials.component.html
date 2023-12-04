@@ -3,14 +3,16 @@
   id="testimonials">
   <div class="mx-auto max-w-2xl lg:max-w-4xl">
     <figure class="mt-10">
-      <div *ngFor="let quote of quotes; let i = index">
+      <div
+        *ngFor="let quote of quotes; let i = index"
+        class="flex flex-col md:odd:items-start md:even:items-end">
         <blockquote
-          class="mt-24 text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+          class="flex text-center md:text-start md:max-w-screen-sm text-white mt-24 text-xl font-semibold leading-8 sm:text-2xl sm:leading-9">
           <p>{{ quote.text }}</p>
         </blockquote>
         <figcaption>
           <div
-            class="mt-4 flex items-center justify-center space-x-3 text-base">
+            class="text-gray-200 mt-4 flex items-center justify-center space-x-3 text-base">
             <div class="font-semibold">{{ quote.author }}</div>
             <svg
               aria-hidden="true"
@@ -20,7 +22,7 @@
               width="3">
               <circle cx="1" cy="1" r="1" />
             </svg>
-            <div>{{ quote.position }}</div>
+            <div class="text-white">{{ quote.position }}</div>
           </div>
         </figcaption>
       </div>

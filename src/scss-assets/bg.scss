@@ -13,6 +13,7 @@
 body, head {
   display: block;
   color: transparent;
+
 }
 
 head::before, head::after,
@@ -25,6 +26,7 @@ body::before, body::after {
   content: 'M';
   mix-blend-mode: screen;
   animation: 44s -27s move infinite ease-in-out alternate;
+  z-index: -1;
 }
 
 $intensity: 10;
@@ -57,10 +59,10 @@ head::after {
 
 @keyframes move {
   from {
-    transform: rotate(0deg) scale(12) translateX(-200px);
+    transform: rotate(0deg) scale(12) translateX(-100px);
   }
   to {
-    transform: rotate(360deg) scale(18) translateX(20px);
+    transform: rotate(360deg) scale(18) translateX(100px);
   }
 }
 

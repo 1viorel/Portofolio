@@ -16,6 +16,12 @@ export class InfoTextComponent {
       const opacity = Math.max(1 - scrollY / maxScroll, 0); // Calculate the new opacity
 
       element.style.opacity = opacity.toString();
+
+      if (opacity === 0) {
+        element.style.transform = 'translateY(-100%)';
+      } else {
+        element.style.transform = 'translateY(0)';
+      }
     }
   }
 }
