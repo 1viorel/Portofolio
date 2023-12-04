@@ -1,11 +1,11 @@
 <div
-  class="laptop:mt-32 mt-16 laptop:mx-40 laptop:mx-12 mx-6 bg-cooldeepblue/50 rounded-lg shadow-2xl shadow-coolblue border-coolblack relative flex flex-col"
+  class="md:mt-32 mt-16 md:mx-40 mx-6 bg-cooldeepblue/50 rounded-lg shadow-2xl shadow-coolblue border-coolblack relative flex flex-col"
   id="timeline">
   <div class="-my-6 p-6">
-    <div class="laptop:text-4xl text-2xl pt-6">activity:</div>
+    <div class="md:text-4xl text-2xl pt-6">activity:</div>
     <div
       *ngFor="let item of items; let last = last"
-      class="relative laptop:pl-8 py-6 group">
+      class="relative md:pl-8 py-6 group">
       <div
         [class]="
           last
@@ -17,7 +17,7 @@
           class="left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-24 h-6 mb-3 text-cooldeepblue bg-coolorange rounded-full">
           {{ item.date }}
         </time>
-        <div class="laptop:text-xl font-bold text-white">
+        <div class="md:text-xl font-bold text-white">
           {{ item.title }}
         </div>
       </div>

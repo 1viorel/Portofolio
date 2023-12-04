@@ -1,19 +1,347 @@
 <div
-  class="laptop:text-9xl text-4xl fancy font-extrabold pt-36 pb-12 pl-12"
+  class="md:text-8xl text-4xl fancy font-extrabold text-white pt-36 pb-12 pl-12"
   id="projects">
-  Projects:
+  projects:
 </div>
-<div
-  class="laptop:px-48 px-6 grid tablet:grid-cols-2 laptop:grid-cols-3 grid-cols-1 gap-4">
-  <div *ngFor="let project of projects; let i = index">
-    <figure
-      class="shadow-2xl shadow-coolblue relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-      <div>
-        <img [src]="images[i]" alt="" class="h-auto max-w-full rounded-lg" />
+<div class="flex flex-col gap-6 md:gap-12">
+  <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-24">
+    <div class="md:px-6 flex flex-col justify-center px-6">
+      <img
+        class="rounded-lg h-full object-cover"
+        src="https://picsum.photos/500/200" />
+    </div>
+    <div class="flex flex-col px-6 justify-center md:w-1/2">
+      <h2 class="text-4xl font-bold text-white">{{ projects[0].title }}</h2>
+      <div class="flex flex-row">
+        <a [href]="projects[0].link" class="text-blue-600 py-3">{{
+          projects[0].link
+        }}</a>
+        <div class="flex items-center pl-2">
+          <a [href]="projects[0].link">
+            <svg
+              aria-hidden="true"
+              class="fill-current text-blue-600 w-3 h-3"
+              viewBox="0 0 18 18"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2" />
+            </svg>
+          </a>
+        </div>
       </div>
-      <figcaption class="absolute px-4 text-lg text-white bottom-6">
-        <p>{{ project }}</p>
-      </figcaption>
-    </figure>
+      <p class="text-gray-300">{{ projects[0].description }}</p>
+      <div class="flex flex-row text-white gap-4 py-4">
+        <svg
+          class="w-8 h-8"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 272"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+            fill="#E23237" />
+          <path
+            d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+            fill="#B52E31" />
+          <path
+            d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+            fill="#FFF" />
+        </svg>
+        <svg
+          class="w-8 h-8"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 272"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+            fill="#E23237" />
+          <path
+            d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+            fill="#B52E31" />
+          <path
+            d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+            fill="#FFF" />
+        </svg>
+        <svg
+          class="w-8 h-8"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 272"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+            fill="#E23237" />
+          <path
+            d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+            fill="#B52E31" />
+          <path
+            d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+            fill="#FFF" />
+        </svg>
+      </div>
+      <div>
+        <button
+          class="text-white bg-coolyellow hover:bg-coolorange focus:outline-none focus:bg-coolorange font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center"
+          type="button">
+          GitHub repo
+          <svg
+            aria-hidden="true"
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            fill="none"
+            viewBox="0 0 14 10"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col md:flex-row-reverse justify-center gap-6 md:gap-12">
+    <div class="md:px-6 flex flex-col justify-center px-6">
+      <img
+        class="rounded-lg h-full object-cover"
+        src="https://picsum.photos/500/200" />
+    </div>
+    <div class="flex flex-col px-6 justify-center md:w-1/2">
+      <h2 class="text-4xl font-bold text-white">{{ projects[1].title }}</h2>
+      <div class="flex flex-row">
+        <a [href]="projects[1].link" class="text-blue-600 py-3">{{
+          projects[1].link
+        }}</a>
+        <div class="flex items-center pl-2">
+          <a [href]="projects[1].link">
+            <svg
+              aria-hidden="true"
+              class="fill-current text-blue-600 w-3 h-3"
+              viewBox="0 0 18 18"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p class="text-gray-300">{{ projects[1].description }}</p>
+      <div class="flex flex-row text-white gap-4 py-4">
+        <svg
+          class="w-8 h-8"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 272"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+            fill="#E23237" />
+          <path
+            d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+            fill="#B52E31" />
+          <path
+            d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+            fill="#FFF" />
+        </svg>
+        <svg
+          class="w-8 h-8"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 272"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+            fill="#E23237" />
+          <path
+            d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+            fill="#B52E31" />
+          <path
+            d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+            fill="#FFF" />
+        </svg>
+        <svg
+          class="w-8 h-8"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 272"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+            fill="#E23237" />
+          <path
+            d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+            fill="#B52E31" />
+          <path
+            d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+            fill="#FFF" />
+        </svg>
+      </div>
+      <div>
+        <button
+          class="text-white bg-coolyellow hover:bg-coolorange focus:outline-none focus:bg-coolorange font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center"
+          type="button">
+          GitHub repo
+          <svg
+            aria-hidden="true"
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            fill="none"
+            viewBox="0 0 14 10"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
+    <div class="md:px-6 flex flex-col justify-center px-6">
+      <img
+        class="rounded-lg h-full object-cover"
+        src="https://picsum.photos/500/200" />
+    </div>
+    <div class="flex flex-col px-6 justify-center md:w-1/2">
+      <h2 class="text-4xl font-bold text-white">{{ projects[2].title }}</h2>
+      <div class="flex flex-row">
+        <a [href]="projects[2].link" class="text-blue-600 py-3">{{
+          projects[2].link
+        }}</a>
+        <div class="flex items-center pl-2">
+          <a [href]="projects[2].link">
+            <svg
+              aria-hidden="true"
+              class="fill-current text-blue-600 w-3 h-3"
+              viewBox="0 0 18 18"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p class="text-gray-300">{{ projects[2].description }}</p>
+      <div class="flex flex-row text-white gap-4 py-4">
+        <svg
+          class="w-8 h-8"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 272"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+            fill="#E23237" />
+          <path
+            d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+            fill="#B52E31" />
+          <path
+            d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+            fill="#FFF" />
+        </svg>
+        <svg
+          class="w-8 h-8"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 272"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+            fill="#E23237" />
+          <path
+            d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+            fill="#B52E31" />
+          <path
+            d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+            fill="#FFF" />
+        </svg>
+        <svg
+          class="w-8 h-8"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 256 272"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+            fill="#E23237" />
+          <path
+            d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+            fill="#B52E31" />
+          <path
+            d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+            fill="#FFF" />
+        </svg>
+      </div>
+      <div>
+        <button
+          class="text-white bg-coolyellow hover:bg-coolorange focus:outline-none focus:bg-coolorange font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center"
+          type="button">
+          GitHub repo
+          <svg
+            aria-hidden="true"
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            fill="none"
+            viewBox="0 0 14 10"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
+
+<section class="md:pl-24 pt-24">
+  <section class="md:pl-24">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <div class="max-w-screen-md">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
+          Want to see more?
+        </h2>
+        <p class="mb-8 font-light sm:text-xl text-gray-400">
+          Down below you can find a page with more of my projects. Also feel
+          free to contact me if you have any questions. I'm always open to new
+          ideas and projects.
+        </p>
+        <div
+          class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+          <a
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-coolyellow rounded-lg hover:bg-coolorange focus:ring-4 focus:ring-primary-300 focus:ring-primary-900"
+            href="#">
+            All my projects
+          </a>
+          <a
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center border rounded-lg focus:ring-4 text-white border-gray-600 hover:bg-gray-700 focus:ring-gray-600"
+            href="#contact">
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 mr-2 text-white"
+              fill="none"
+              viewBox="0 0 10 14"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5 1v12m0 0 4-4m-4 4L1 9"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2" />
+            </svg>
+            Contact me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
